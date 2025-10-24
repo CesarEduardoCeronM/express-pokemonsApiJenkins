@@ -10,7 +10,7 @@ const{
 
 const router = Router();
 
-router.get('/', pokemonsGet);
+router.get('/',pokemonsGet);
 router.post('/', pokemonsPost);
 router.put('/:id', pokemonsPut);
 router.patch('/:id', pokemonsPatch);

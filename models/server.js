@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 
 class Server{
 
@@ -16,7 +17,10 @@ class Server{
     }
 
     routes(){
-        this.app.use('/api/pokemons', require('../routes/pokemons'));
+        this.app.use('/api/pokemons/', require('../routes/pokemons'));
+        this.app.get('*',(req, res)=>{
+            res.sendFile(path.join(__dirname,'../public/404.html'))
+        });
     }
 
     listen(){

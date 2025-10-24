@@ -16,8 +16,8 @@ const pokemonsPost = (req, res = response)=>{
     }
     pokemons.push(nuevoPokemon);
     console.log(pokemons);
-    res.json({
-     msg: `El pokemon ${nuevoPokemon.nombre} se ha creado`
+    res.status(201).json({
+        msg: `El pokemon ${nuevoPokemon.nombre} se ha creado`
     }); 
  }
 
