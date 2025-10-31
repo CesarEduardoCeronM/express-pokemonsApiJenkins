@@ -19,13 +19,13 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Desplegando la aplicación..."
-                sh                   
+                sh  '''                 
                     docker stop pokemon-app-container || true
                     
                     docker rm pokemon-app-container || true
                 
                     docker run -d --name pokemon-app-container -p 8080:3000 pokemon-api:latest
-                
+                '''
             }
         }
     }
