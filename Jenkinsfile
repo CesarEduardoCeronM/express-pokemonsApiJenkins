@@ -33,8 +33,6 @@ pipeline {
     post {
         always {
             echo "Pipeline terminado."
-            bat 'docker stop pokemon-app-container || true'
-            bat 'docker rm pokemon-app-container || true'
         }
     }
 }
