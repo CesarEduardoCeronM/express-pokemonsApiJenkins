@@ -24,7 +24,7 @@ pipeline {
                     
                     docker rm pokemon-app-container
                 
-                    docker run -d --name pokemon-app-container -p 8081:3000 pokemon-api:latest
+                    docker run -d --name pokemon-app-container -p 8081:8081 pokemon-api:latest
                 '''
             }
         }
